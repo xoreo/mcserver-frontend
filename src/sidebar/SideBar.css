@@ -1,0 +1,10 @@
+.sidebar {
+    height: 100%;
+    font-size: 16px;
+    background-color: #0f111b;
+    /* width: 8%; */
+}
+
+ul {
+    list-style-type: none;
+}
