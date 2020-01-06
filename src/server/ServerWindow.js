@@ -53,7 +53,7 @@ class ServerWindow extends Component {
                     
                     <p> {JSON.stringify(this.state.servers)}</p>
                     {
-                        this.state.states.map(
+                        this.state.servers.map(
                             server_ => <Server server={server_} />
                         )
                     }
