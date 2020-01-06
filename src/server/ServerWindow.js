@@ -52,8 +52,14 @@ class ServerWindow extends Component {
                 <div className="fr-container">
                     
                     <p> {JSON.stringify(this.state.servers)}</p>
-                    {/* <Server /> */}
-                    
+                    {
+                        this.state.states.map(
+                            server_ => <Server server={server_} />
+                        )
+                    }
+                
+                {/* <Server server={this.props.servers[0]} /> */}
+                
                 </div>
             </div>
         );
