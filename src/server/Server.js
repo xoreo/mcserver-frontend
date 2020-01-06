@@ -1,7 +1,51 @@
 import React, { Component } from 'react';
+import net from '../net/net';
 import './Server.css';
 
 class Server extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            status: '',
+        };
+
+        this.getStatus();
+    }
+
+    getStatus() {
+        let id = this.props.server['id'];
+        fetch(
+            net.endpoint(`system/status/${id}`),
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }
+        ).then(res => (res.json())
+        .then(res => {
+            // Check error
+            if (res.error) {
+                console.log(res.output);
+                return;
+            }
+
+            console.log(res.output);
+
+            this.setState({
+                status: res.output,
+            });
+        }));
+    }
+
+    displayStatus() {
+        if (this.state.status == '') {
+            return 'Server not initialized';
+        }
+        return this.state.status;
+    }
+
     render() {
         return (
             <div className="fr-container fr-half server">
@@ -17,9 +61,13 @@ class Server extends Component {
                             <div>RAM: {this.props.server['ram']} MB</div>
                             <div>Version: MC {this.props.server['version']}</div>
                             <div>Port: {this.props.server['port']}</div>
+                            
+                            <hr />
+                            <p>{this.displayStatus()}</p>
                         </div>
                         
-                        <button className="status-button">View Status</button>
+
+                        <button className="properties-button">Edit Properties</button>
                     </div>
                 </div>
             </div>

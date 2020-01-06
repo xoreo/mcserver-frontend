@@ -16,17 +16,13 @@ class ServerWindow extends Component {
         this.getServers();
     }
 
-    // renderServer(server) {
-    //     return <Server server={server}/>;
-    // }
-
     getServers() {
         fetch(
             net.endpoint('getAllServers'), // Get the endpoint
             {
                 method: 'GET',
                 headers: {
-                    'Content-Type': 'text/plain' // For CORS reasons
+                    'Content-Type': 'application/json'
                 },
             }
         ).then(res => res.json()) // Handle the Promise
@@ -41,7 +37,7 @@ class ServerWindow extends Component {
 
             // Update the state with the response
             this.setState({
-                servers: res.servers
+                servers: res.servers,
             });
         });
     }
@@ -50,7 +46,7 @@ class ServerWindow extends Component {
         return (
             <div className="serverWindow">
                 <div className="fr-container">
-                    
+
                     <h1>My Servers</h1>
                     {/* <p> {JSON.stringify(this.state.servers)}</p> */}
                     {
