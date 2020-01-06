@@ -6,11 +6,16 @@ class Item extends Component {
     render() {
         return (
             <div className="navitem-container">
-                <li><a>
-                    <Link to={this.props.url}>
-                        {this.props.text}
-                    </Link>
-                </a></li>
+                <Link to={this.props.url}>
+                    
+                    <li>
+                        <div className="navitem">
+                            
+                            {this.props.text}
+                        </div>
+                    </li>
+
+                </Link>
             </div>
         );
     }
