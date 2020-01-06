@@ -6,7 +6,6 @@ class ServerPage extends Component {
     render() {
         return (
             <div className="fr-row">
-                <SideBar />
                 <ServerWindow />
             </div>
         );

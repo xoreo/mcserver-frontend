@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router';
+import { Switch, Route, IndexRoute } from 'react-router';
 
-import Overview from './OverviewPage';
-import ServerWindow from './server/ServerWindow';
+import OverviewPage from './OverviewPage';
+import ServerPage from './server/ServerWindow';
 // import NewServer from './NewServer';
 
 class Main extends Component {
     render() {
-        return (
+        return ( 
             <Switch>
-                <Route path="/" component={Overview} />
-                <Route path="/servers" component={ServerWindow} />
+                <Route exact path="/" component={OverviewPage} />
+                <Route path="/servers" component={ServerPage} />
                 {/* <Route path="/new" component={NewServer} /> */}
             </Switch>
         );

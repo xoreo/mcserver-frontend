@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Server from './Server';
 import net from '../net/net'
-import './ServerWindow.css';
 
 class ServerWindow extends Component {
     constructor(props) {
@@ -42,17 +41,15 @@ class ServerWindow extends Component {
 
     render() {
         return (
-            <div className="serverWindow">
-                <div className="fr-container">
+            <div className="fr-container main">
 
-                    <h1>My Servers</h1>
-                    {
-                        this.state.servers.map(
-                            server_ => <Server server={server_} />
-                        )
-                    }
-                
-                </div>
+                <h1>My Servers</h1>
+                {
+                    this.state.servers.map(
+                        server_ => <Server server={server_} />
+                    )
+                }
+            
             </div>
         );
     }

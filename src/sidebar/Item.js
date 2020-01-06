@@ -10,7 +10,6 @@ class Item extends Component {
                     
                     <li>
                         <div className="navitem">
-                            
                             {this.props.text}
                         </div>
                     </li>
