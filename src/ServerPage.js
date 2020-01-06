@@ -1,15 +1,58 @@
 import React, { Component } from 'react';
-import SideBar from './sidebar/SideBar';
-import ServerWindow from './server/ServerWindow';
+import Server from './Server/Server';
+import net from './net/net'
 
-class ServerPage extends Component {
+class ServerWindow extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            servers: [],
+        }
+
+        this.getServers();
+    }
+
+    getServers() {
+        fetch(
+            net.endpoint('getAllServers'), // Get the endpoint
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }
+        ).then(res => res.json()) // Handle the Promise
+        .then(res => {
+            // Check error
+            if (res.error) {
+                console.log(res.error);
+                return;
+            }
+
+            console.log(res.servers);
+
+            // Update the state with the response
+            this.setState({
+                servers: res.servers,
+            });
+        });
+    }
+
     render() {
         return (
-            <div className="fr-row">
-                <ServerWindow />
+            <div className="fr-container main">
+
+                <h1>My Servers</h1>
+                {
+                    this.state.servers.map(
+                        server_ => <Server server={server_} key={server_['id']}/>
+                    )
+                }
+            
             </div>
         );
     }
 }
 
-export default ServerPage;
+export default ServerWindow;

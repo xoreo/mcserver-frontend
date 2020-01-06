@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Switch, Route, IndexRoute } from 'react-router';
+import { Switch, Route } from 'react-router';
 
 import OverviewPage from './OverviewPage';
-import ServerPage from './server/ServerWindow';
-// import NewServer from './NewServer';
+import ServerPage from './ServerPage';
+import NewServerPage from './NewServerPage';
 
 class Main extends Component {
     render() {
@@ -11,6 +11,7 @@ class Main extends Component {
             <Switch>
                 <Route exact path="/" component={OverviewPage} />
                 <Route path="/servers" component={ServerPage} />
+                <Route path="/new" component={NewServerPage} />
                 {/* <Route path="/new" component={NewServer} /> */}
             </Switch>
         );
