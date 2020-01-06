@@ -63,12 +63,12 @@ class Server extends Component {
                             <div>Port: {this.props.server['port']}</div>
                             
                             <hr />
-                            <p>{this.displayStatus()}</p>
+                            <p className="status">{this.displayStatus()}</p>    
                         </div>
-                        
 
-                        <button className="properties-button">Edit Properties</button>
+                        <button className="properties-button">Edit</button>
                     </div>
+
                 </div>
             </div>
         );

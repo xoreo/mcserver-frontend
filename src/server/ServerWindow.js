@@ -48,14 +48,11 @@ class ServerWindow extends Component {
                 <div className="fr-container">
 
                     <h1>My Servers</h1>
-                    {/* <p> {JSON.stringify(this.state.servers)}</p> */}
                     {
                         this.state.servers.map(
                             server_ => <Server server={server_} />
                         )
                     }
-                
-                {/* <Server server={this.props.servers[0]} /> */}
                 
                 </div>
             </div>

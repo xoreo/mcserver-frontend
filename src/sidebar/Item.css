@@ -13,3 +13,8 @@
     color: white;
     text-decoration: none;
 }
+
+.bottom {
+    bottom: 12px;
+    position: absolute;
+}

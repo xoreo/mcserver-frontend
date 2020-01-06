@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Item from './Item';
+import BottomItem from './BottomItem';
 import './SideBar.css';
 
 class SideBar extends Component {
@@ -15,6 +16,7 @@ class SideBar extends Component {
                     <Item text="New Server" url="/" />
                     <Item text="Traffic" url="/" />
                     <Item text="Settings" url="/" />
+                    <BottomItem text="Log Out" url="/" />
                 </ul>
 
             </div>
