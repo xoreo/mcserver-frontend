@@ -37,18 +37,24 @@ class ServerWindow extends Component {
                 return;
             }
 
+            console.log(res.servers);
+
             // Update the state with the response
             this.setState({
-                servers: JSON.parse(res.servers)
+                servers: res.servers
             });
         });
     }
 
     render() {
         return (
-            <div>
-                <p> {this.state.servers}</p>
-                {/* <Server /> */}
+            <div className="serverWindow">
+                <div className="fr-container">
+                    
+                    <p> {JSON.stringify(this.state.servers)}</p>
+                    {/* <Server /> */}
+                    
+                </div>
             </div>
         );
     }

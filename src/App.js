@@ -8,7 +8,6 @@ class App extends Component {
         return (
             <div className="fr-row">
                 <SideBar />
-
                 <ServerWindow />
             </div>
         );
