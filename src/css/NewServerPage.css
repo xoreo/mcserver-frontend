@@ -1,10 +1,4 @@
-.name {
-    display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 18pt;
-
-    color: #1f95f2;
+input[type="text"] {
+    width: 350px;
+    margin-bottom: 12px;
 }

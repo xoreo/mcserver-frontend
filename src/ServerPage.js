@@ -43,7 +43,7 @@ class ServerWindow extends Component {
         return (
             <div className="fr-container main">
 
-                <h1>My Servers</h1>
+                <div className="header">My Servers</div>
                 {
                     this.state.servers.map(
                         server_ => <Server server={server_} key={server_['id']}/>

@@ -4,8 +4,10 @@ class Overview extends Component {
     render() {
         return (
             <div className="fr-container main">
-                <h1>Overview</h1>
-                Welcome to the overview window
+                <div className="header">Overview</div>
+                <div className="fr-container">
+                    Welcome to the overview window
+                </div>
             </div>
         );
     }

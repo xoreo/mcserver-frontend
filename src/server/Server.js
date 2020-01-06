@@ -51,7 +51,7 @@ class Server extends Component {
             <div className="fr-container fr-half server">
                 <div className="fr-card">
                     <header className="fr-container">
-                        <div className="name">{this.props.server['name']}</div>
+                        <div className="header">{this.props.server['name']}</div>
                         <div className="id">{this.props.server['id']}</div>
                     </header>
 

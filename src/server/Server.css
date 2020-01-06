@@ -43,7 +43,14 @@ button:hover {
     background-color: lime;
 }
 
-.name {
+.id {
+    margin-top: -12px;
+    margin-bottom: .7em;
+    color: #525658;
+    font-size: 12pt;
+}
+
+.header {
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -52,11 +59,4 @@ button:hover {
     font-size: 18pt;
 
     color: #1f95f2;
-}
-
-.id {
-    margin-top: -12px;
-    margin-bottom: .7em;
-    color: #525658;
-    font-size: 12pt;
 }
