@@ -1,3 +1,62 @@
-.test {
+button {
+    color: white;
+    margin-bottom: 16px;
+    text-align: center;
+    border-radius: 1px;
+    border: none;
+
+    margin-top: 20px;
+    padding: 8px 32px;
+    vertical-align: middle;
+    overflow: hidden;
+    float: right;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 4px;
+    border: 0px;
+
+    /* background-color: #6edfff; */
+    background-color: #1f95f2;
+    /* font-family: 'Roboto Slab', serif; */
+    /* font-family: SFCompactDisplay; */
+}
+
+button:hover {
+    color: #23273a;
+}
+
+.server {
+    margin-bottom: 32px;
+}
+
+.status-button {
+    background-color: #1f95f2;
+}
+
+.start-button {
     background-color: red;
+}
+
+.stop-button {
+    background-color: lime;
+}
+
+.name {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 18pt;
+
+    color: #1f95f2;
+}
+
+.id {
+    margin-top: -12px;
+    margin-bottom: .7em;
+    color: #525658;
+    font-size: 12pt;
 }
