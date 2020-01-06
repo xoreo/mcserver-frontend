@@ -4,9 +4,11 @@ import './Item.css';
 class Item extends Component {
     render() {
         return (
-            <li>
-                <a href="{this.props.url}">{this.props.text}</a>
-            </li>
+            <div className="navitem-container">
+                <li>
+                    <a className="navitem" href={this.props.url}>{this.props.text}</a>
+                </li>
+            </div>
         );
     }
 }

@@ -5,8 +5,10 @@ import './App.css';
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="fr-row">
                 <SideBar />
+
+                <ServerWindow />
             </div>
         );
     }

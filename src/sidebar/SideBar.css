@@ -1,10 +1,12 @@
 .sidebar {
     height: 100%;
+    width: 15%;
     font-size: 16px;
     background-color: #0f111b;
-    /* width: 8%; */
+    position: absolute;
 }
 
-ul {
-    list-style-type: none;
+.navheader {
+    padding: 8px 16px;
+    color: white;
 }

@@ -1,10 +1,15 @@
-li {
-    padding: 1px;
+.navitem-container {
+    padding: 2px;
     border-radius: 4px;
     margin-bottom: 2px;
     cursor: pointer;
 }
 
-li:hover {
+.navitem-container:hover {
     background-color: #23273a;
+}
+
+.navitem {
+    color: white;
+    text-decoration: none;
 }

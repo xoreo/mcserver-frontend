@@ -5,15 +5,18 @@ import './SideBar.css';
 class SideBar extends Component {
     render() {
         return (
-            <div className="fr-container">
-                <div className="sidebar">
+            <div className="sidebar">
 
-                    <ul className="fr-ul">
-                        <Item text="Overview" url="/" />
-                        <Item text="My Servers" url="/servers" />
-                    </ul>
+                <h3 className="navheader">NapCraft Hosting</h3>
 
-                </div>
+                <ul className="fr-ul">
+                    <Item text="Overview" url="/" />
+                    <Item text="My Servers" url="/" />
+                    <Item text="New Server" url="/" />
+                    <Item text="Traffic" url="/" />
+                    <Item text="Settings" url="/" />
+                </ul>
+
             </div>
         );
     }
