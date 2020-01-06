@@ -12,11 +12,11 @@ class SideBar extends Component {
 
                 <ul className="fr-ul">
                     <Item text="Overview" url="/" />
-                    <Item text="My Servers" url="/" />
-                    <Item text="New Server" url="/" />
-                    <Item text="Traffic" url="/" />
-                    <Item text="Settings" url="/" />
-                    <BottomItem text="Log Out" url="/" />
+                    <Item text="My Servers" url="/servers" />
+                    <Item text="New Server" url="/new" />
+                    <Item text="Traffic" url="/traffic" />
+                    <Item text="Settings" url="/settings" />
+                    <BottomItem text="Log Out" url="/logout" />
                 </ul>
 
             </div>

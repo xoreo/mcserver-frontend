@@ -4,8 +4,6 @@ import net from '../net/net'
 import './ServerWindow.css';
 
 class ServerWindow extends Component {
-    // The actual fetch code happens here
-
     constructor(props) {
         super(props);
 

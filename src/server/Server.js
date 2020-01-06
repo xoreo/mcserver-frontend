@@ -40,7 +40,7 @@ class Server extends Component {
     }
 
     displayStatus() {
-        if (this.state.status == '') {
+        if (this.state.status === '') {
             return 'Server not initialized';
         }
         return this.state.status;

@@ -1,3 +1,4 @@
+/* eslint-disable */
 // The ip and port of the backend server
 const ip = 'localhost';
 // const ip = '192.168.1.200';

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
+import Main from './Main';
 import SideBar from './sidebar/SideBar';
-import ServerWindow from './server/ServerWindow';
-import './App.css';
+// import './SideBar.css';
 
 class App extends Component {
     render() {
         return (
-            <div className="fr-row">
+            <div>
                 <SideBar />
-                <ServerWindow />
+                <Main />
             </div>
-        );
+        )
     }
 }
 
