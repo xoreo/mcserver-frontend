@@ -66,7 +66,7 @@ class Server extends Component {
                             <p className="status">{this.displayStatus()}</p>    
                         </div>
 
-                        <button className="properties-button">Edit</button>
+                        <button>Edit</button>
                     </div>
 
                 </div>

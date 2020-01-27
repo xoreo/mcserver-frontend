@@ -25,3 +25,22 @@ header {
 
     color: #1f95f2;
 }
+
+button {
+    color: white;
+    margin-bottom: 16px;
+    text-align: center;
+    border-radius: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    border: none;
+    border-radius: 4px;
+    background-color: #1f95f2;
+    /* font-family: 'Roboto Slab', serif; */
+    /* font-family: SFCompactDisplay; */
+}
+
+button:hover {
+    color: #23273a;
+}

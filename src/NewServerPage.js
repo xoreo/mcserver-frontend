@@ -20,7 +20,8 @@ class NewServerPage extends Component {
                     
                     <label><b>RAM (MB)</b></label>
                     <input className="fr-input fr-border fr-round-large" type="text" />
-
+                    
+                    <button>Create Server</button>
                 </form>
             </div>
         );
