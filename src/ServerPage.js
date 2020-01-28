@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Server from './Server/Server';
+import Server from './server/Server';
 import net from './net/net'
 
 class ServerWindow extends Component {
