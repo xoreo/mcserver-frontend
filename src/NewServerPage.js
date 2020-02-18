@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import "./css/NewServerPage.css"
+import './css/NewServerPage.css';
+import net from './net/net';
 
 class NewServerPage extends Component {
     constructor(props) {
@@ -14,12 +15,38 @@ class NewServerPage extends Component {
             response: {},
         };
 
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit() {
+    handleSubmit(e) {
+        fetch(
+            net.endpoint('createServer'),
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: this.state.name,
+                    version: this.state.version,
+                    port: this.state.port,
+                    ram: this.state.ram,
+                })
+            }
+        ).then(res => res.json())
+        .then(res => {
+            if (res.error) {
+               console.error(res.error);
+               return;
+            }
+            console.log(JSON.stringify(res));
+
+            this.setState({response: res});
+        });
+
+        e.preventDefault();
+    }
         
-    }
-
     render() {
         return (
             <div className="fr-container main">
