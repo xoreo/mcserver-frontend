@@ -6,3 +6,9 @@ input[type="text"] {
 button {
     float: left;
 }
+
+.version-select {
+    width: 350px;
+    margin-bottom: 12px;
+    
+}

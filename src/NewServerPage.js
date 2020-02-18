@@ -7,7 +7,7 @@ class NewServerPage extends Component {
 
         this.state = {
             name: '',
-            version: '',
+            version: '1.12',
             port: '',
             ram: '',
             
@@ -30,12 +30,26 @@ class NewServerPage extends Component {
                         value={this.state.name}
                         className="fr-input fr-border fr-round-large" type="text" />
 
-                    <label><b>Version</b></label>
-                    <input
-                        onChange={e => {this.setState({version: e.target.value})}}
-                        value={this.state.version}
-                        className="fr-input fr-border fr-round-large" type="text" />
-                    
+                    <label><b>Version</b></label><br />
+                    <select
+                        className="fr-select fr-border fr-round-large version-select"
+                        onChange={e => {this.setState({version: e.target.value})}}>1.12
+                        
+                        <option disabled>Choose Version</option>
+                        <option
+                            defaultValue="1.12">1.12
+                        </option>
+                        <option
+                            defaultValue="1.8">1.8
+                        </option>
+                        <option
+                            defaultValue="1.7.2">1.7.2
+                        </option>
+                        <option
+                            defaultValue="1.2.1">1.2.1
+                        </option>
+                    </select><br />
+
                     <label><b>Port</b></label>
                     <input
                         onChange={e => {this.setState({port: e.target.value})}}
