@@ -16,13 +16,17 @@ class NewServerPage extends Component {
 
     }
 
+    handleSubmit() {
+        
+    }
+
     render() {
         return (
             <div className="fr-container main">
             {console.log(this.state)}
                 <div className="header">Create a new server</div>
 
-                <form className="fr-container">
+                <form className="fr-container" onSubmit={this.handleSubmit}>
                     
                     <label><b>Name</b></label>
                     <input
@@ -62,7 +66,7 @@ class NewServerPage extends Component {
                         value={this.state.ram}
                         className="fr-input fr-border fr-round-large" type="text" />
                     
-                    <button>Create Server</button>
+                    <button type="submit">Create Server</button>
 
                 </form>
             </div>
