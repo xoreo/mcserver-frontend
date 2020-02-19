@@ -66,7 +66,8 @@ class Server extends Component {
                             <p className="status">{this.displayStatus()}</p>    
                         </div>
 
-                        <button>Edit</button>
+                        <button>Manage</button>
+                        {/* The manage button will navigate the server manager window */}
                     </div>
 
                 </div>
