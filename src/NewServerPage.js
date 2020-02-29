@@ -55,13 +55,13 @@ class NewServerPage extends Component {
 
                 <form className="fr-container" onSubmit={this.handleSubmit}>
                     
-                    <label><b>Name</b></label>
+                    <label>Name</label>
                     <input
                         onChange={e => {this.setState({name: e.target.value})}}
                         value={this.state.name}
                         className="fr-input fr-border fr-round-large" type="text" />
 
-                    <label><b>Version</b></label><br />
+                    <label>Version</label><br />
                     <select
                         className="fr-select fr-border fr-round-large version-select"
                         onChange={e => {this.setState({version: e.target.value})}}>1.12
@@ -81,13 +81,13 @@ class NewServerPage extends Component {
                         </option>
                     </select><br />
 
-                    <label><b>Port</b></label>
+                    <label>Port</label>
                     <input
                         onChange={e => {this.setState({port: e.target.value})}}
                         value={this.state.port}
                         className="fr-input fr-border fr-round-large" type="text" />
                     
-                    <label><b>RAM (MB)</b></label>
+                    <label>RAM (MB)</label>
                     <input
                         onChange={e => {this.setState({ram: e.target.value})}}
                         value={this.state.ram}

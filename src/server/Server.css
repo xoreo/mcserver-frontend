@@ -1,15 +1,9 @@
-
 button {
     margin-top: 20px;
     padding: 8px 32px;
     vertical-align: middle;
     overflow: hidden;
     float: right;
-    
-}
-
-button:hover {
-    color: #23273a;
 }
 
 .id {
