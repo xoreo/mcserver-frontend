@@ -4,7 +4,7 @@ class PropertyField extends Component {
     render() {
         return (
             <div>
-                {this.props.property}
+                INNER PROPERTY: {this.props.property}
             </div>
         );
     }

@@ -13,6 +13,8 @@ class ServerManager extends Component {
         };
 
         this.getServer();
+
+        this.addProperties = this.addProperties.bind(this);
     }
 
     getServer() {
@@ -38,17 +40,24 @@ class ServerManager extends Component {
         }));
     }
     
+    addProperties() {
+        if (this.state.server) {
+            return <PropertyEditor properties={this.state.server.properties}/>
+        } else {
+            console.log("not erady");
+        }
+    }
     render() {
+        if (!this.state.server) {}
         return (
             <div className="fr-container main">
                 <div className="header">{this.state.server.name}</div>
                 <div className="id">{this.state.server.id}</div>
                 <div className="id">{JSON.stringify(this.state.server)}</div>
                 
-                
                 <div className="fr-row">
                     <div className="fr-col s6">
-
+                        
                     </div>
 
                     <div className="fr-col s6">
