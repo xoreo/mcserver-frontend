@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropertyEditor from './PropertyEditor'
 import net from '../net/net';
 import "../server/Server.css"
 
@@ -42,6 +43,19 @@ class ServerManager extends Component {
             <div className="fr-container main">
                 <div className="header">{this.state.server.name}</div>
                 <div className="id">{this.state.server.id}</div>
+                <div className="id">{JSON.stringify(this.state.server)}</div>
+                
+                
+                <div className="fr-row">
+                    <div className="fr-col s6">
+
+                    </div>
+
+                    <div className="fr-col s6">
+                        <PropertyEditor properties={this.state.server.properties}/>
+                    </div>
+                </div>
+
             </div>
         );
     }
