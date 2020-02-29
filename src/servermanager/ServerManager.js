@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropertyEditor from './PropertyEditor'
+import ValueEditor from './ValueEditor'
 import net from '../net/net';
 import "../server/Server.css"
 
@@ -13,8 +13,6 @@ class ServerManager extends Component {
         };
 
         this.getServer();
-
-        this.addProperties = this.addProperties.bind(this);
     }
 
     getServer() {
@@ -36,17 +34,11 @@ class ServerManager extends Component {
 
             this.setState({
                 server: res.server,
+                coreSettings: {}
             });
         }));
     }
-    
-    addProperties() {
-        if (this.state.server) {
-            return <PropertyEditor properties={this.state.server.properties}/>
-        } else {
-            console.log("not erady");
-        }
-    }
+
     render() {
         if (!this.state.server) {}
         return (
@@ -57,11 +49,11 @@ class ServerManager extends Component {
                 
                 <div className="fr-row">
                     <div className="fr-col s6">
-                        
+                        <ValueEditor properties={this.state.coreSettings} header="Settings" />
                     </div>
 
                     <div className="fr-col s6">
-                        <PropertyEditor properties={this.state.server.properties}/>
+                        <ValueEditor properties={this.state.server.properties} header="Properties" />
                     </div>
                 </div>
 

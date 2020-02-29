@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import PropertyField from './PropertyField';
+import ValueField from './ValueField';
 
-class PropertyEditor extends Component {
+class ValueEditor extends Component {
     constructor(props) {
         super(props);
 
-        this.getProperties = this.getProperties.bind(this);
+        this.getItems = this.getItems.bind(this);
     }
 
-    getProperties() {
+    getItems() {
         if (this.props.properties) {
             console.log(Object.entries(this.props.properties));
             return Object.entries(this.props.properties);
@@ -20,10 +20,10 @@ class PropertyEditor extends Component {
     render() {
         return (
             <div>
-                <div className="header">Properties</div>
+                <div className="header">{this.props.header}</div>
                 {
-                    this.getProperties().map(
-                        property => <PropertyField property={property} key={property} />
+                    this.getItems().map(
+                        item => <ValueField item={item} key={item} />
                     )
                 }
             </div>
@@ -31,4 +31,4 @@ class PropertyEditor extends Component {
     }
 }
 
-export default PropertyEditor;
+export default ValueEditor;
