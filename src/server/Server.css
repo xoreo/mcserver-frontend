@@ -5,18 +5,11 @@ button {
     vertical-align: middle;
     overflow: hidden;
     float: right;
+    
 }
 
 button:hover {
     color: #23273a;
-}
-
-.start-button {
-    background-color: red;
-}
-
-.stop-button {
-    background-color: lime;
 }
 
 .id {

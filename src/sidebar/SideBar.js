@@ -11,11 +11,12 @@ class SideBar extends Component {
                 <h3 className="navheader">NapCraft Hosting</h3>
 
                 <ul className="fr-ul">
-                    <Item text="Overview" url="/" />
+                    <Item text="Overview"   url="/" />
                     <Item text="My Servers" url="/servers" />
-                    <Item text="New Server" url="none" popup="new" />
-                    <Item text="Traffic" url="/traffic" />
-                    <Item text="Settings" url="/settings" />
+                    <Item text="New Server" url="new" />
+                    <Item text="Traffic"    url="/traffic" />
+                    <Item text="Settings"   url="/settings" />
+                    
                     <BottomItem text="Log Out" url="/logout" />
                 </ul>
 
