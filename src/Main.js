@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router';
 import OverviewPage from './OverviewPage';
 import ServerPage from './ServerPage';
 import NewServerPage from './NewServerPage';
+import ServerManager from './servermanager/ServerManager';
 
 class Main extends Component {
     render() {
@@ -12,6 +13,7 @@ class Main extends Component {
                 <Route exact path="/" component={OverviewPage} />
                 <Route path="/servers" component={ServerPage} />
                 <Route path="/new" component={NewServerPage} />
+                <Route path="/manage" component={ServerManager} />
             </Switch>
         );
     }
