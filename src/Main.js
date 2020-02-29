@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router';
+import { Switch, Route } from 'react-router-dom';
 
 import OverviewPage from './OverviewPage';
 import ServerPage from './ServerPage';
@@ -13,7 +13,7 @@ class Main extends Component {
                 <Route exact path="/" component={OverviewPage} />
                 <Route path="/servers" component={ServerPage} />
                 <Route path="/new" component={NewServerPage} />
-                <Route path="/manage" component={ServerManager} />
+                <Route path="/manage/:id" component={ServerManager} />
             </Switch>
         );
     }

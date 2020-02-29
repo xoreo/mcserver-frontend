@@ -8,7 +8,7 @@ class ServerManager extends Component {
         super(props);
         
         this.state = {
-            id: "23c7e8e4",
+            id: this.props.match.params.id,
             properties: {},
             settings: {}
         };
@@ -17,6 +17,9 @@ class ServerManager extends Component {
     }
 
     getServer() {
+        if (this.state.id === '') {
+            return;
+        }
         fetch(
             net.endpoint(`getServer/${this.state.id}`),
             {
@@ -44,8 +47,10 @@ class ServerManager extends Component {
 
     render() {
         if (!this.state.properties) {}
+        // this.setState({id: this.props.match.params.id});
         return (
             <div className="fr-container main">
+                
                 <div className="header">{this.state.settings.name}</div>
                 <div className="id">{this.state.id}</div>
                 <div className="id">Server created: {this.state.timestamp}</div>
