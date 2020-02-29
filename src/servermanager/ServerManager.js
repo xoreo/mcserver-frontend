@@ -9,7 +9,8 @@ class ServerManager extends Component {
         
         this.state = {
             id: "23c7e8e4",
-            server: {},
+            properties: {},
+            settings: {}
         };
 
         this.getServer();
@@ -31,29 +32,30 @@ class ServerManager extends Component {
                 console.log(res);
                 return;
             }
-
+            
             this.setState({
-                server: res.server,
-                coreSettings: {}
+                properties: res.properties,
+                settings: res.coreProperties,
+                timestamp: res.timestamp
             });
         }));
     }
 
     render() {
-        if (!this.state.server) {}
+        if (!this.state.properties) {}
         return (
             <div className="fr-container main">
-                <div className="header">{this.state.server.name}</div>
-                <div className="id">{this.state.server.id}</div>
-                <div className="id">{JSON.stringify(this.state.server)}</div>
+                <div className="header">{this.state.settings.name}</div>
+                <div className="id">{this.state.settings.id}</div>
+                <div className="id">{JSON.stringify(this.state.timestamp)}</div>
                 
                 <div className="fr-row">
                     <div className="fr-col s6">
-                        <ValueEditor properties={this.state.coreSettings} header="Settings" />
+                        <ValueEditor properties={this.state.settings} header="Settings" />
                     </div>
 
                     <div className="fr-col s6">
-                        <ValueEditor properties={this.state.server.properties} header="Properties" />
+                        <ValueEditor properties={this.state.properties} header="Properties" />
                     </div>
                 </div>
 
