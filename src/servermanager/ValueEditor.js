@@ -10,7 +10,6 @@ class ValueEditor extends Component {
 
     getItems() {
         if (this.props.properties) {
-            console.log(Object.entries(this.props.properties));
             return Object.entries(this.props.properties);
         } else {
             return [];

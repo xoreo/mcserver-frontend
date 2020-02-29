@@ -30,8 +30,6 @@ class ServerWindow extends Component {
                 return;
             }
 
-            console.log(res.servers);
-
             // Update the state with the response
             this.setState({
                 servers: res.servers,

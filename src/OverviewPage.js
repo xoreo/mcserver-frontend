@@ -6,7 +6,7 @@ class Overview extends Component {
             <div className="fr-container main">
                 <div className="header">Overview</div>
                 <div className="fr-container">
-                    Welcome to the overview window
+                    Welcome to the overview window. Not sure what I'm going to put here yet.
                 </div>
             </div>
         );

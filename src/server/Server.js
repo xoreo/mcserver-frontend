@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import net from '../net/net';
 import './Server.css';
 
@@ -30,8 +31,6 @@ class Server extends Component {
                 console.log(res.output);
                 return;
             }
-
-            console.log(res.output);
 
             this.setState({
                 status: res.output,
@@ -66,7 +65,10 @@ class Server extends Component {
                             <p className="status">{this.displayStatus()}</p>    
                         </div>
 
-                        <button>Manage</button>
+                        <Link to={`/manage/${this.props.server['id']}`}>
+                            <button>Manage</button>
+                        </Link>
+                        
                         {/* The manage button will navigate the server manager window */}
                     </div>
 

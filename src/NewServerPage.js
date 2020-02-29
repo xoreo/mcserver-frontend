@@ -39,7 +39,6 @@ class NewServerPage extends Component {
                console.error(res.error);
                return;
             }
-            console.log(JSON.stringify(res));
 
             this.setState({response: res});
         });
@@ -50,7 +49,6 @@ class NewServerPage extends Component {
     render() {
         return (
             <div className="fr-container main">
-            {console.log(this.state)}
                 <div className="header">Create a new server</div>
 
                 <form className="fr-container" onSubmit={this.handleSubmit}>
