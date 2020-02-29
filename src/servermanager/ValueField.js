@@ -7,12 +7,18 @@ class ValueField extends Component {
         this.state = {
             value: props.item[1],
         };
+
+        this.capitalize = this.capitalize.bind(this);
+    }
+
+    capitalize(s) {
+        return s[0].toUpperCase() + s.slice(1);
     }
 
     render() {
         return (
             <div>
-                <label>{this.props.item[0]}</label>
+                <label>{this.capitalize(this.props.item[0])}</label>
                 <input
                     onChange={e => {this.setState({value: e.target.value})}}
                     value={this.state.value}

@@ -32,11 +32,12 @@ class ServerManager extends Component {
                 console.log(res);
                 return;
             }
-            
+
             this.setState({
+                timestamp: res.timestamp.slice(0, 19),
+                id: res.id,
                 properties: res.properties,
                 settings: res.coreProperties,
-                timestamp: res.timestamp
             });
         }));
     }
@@ -46,8 +47,8 @@ class ServerManager extends Component {
         return (
             <div className="fr-container main">
                 <div className="header">{this.state.settings.name}</div>
-                <div className="id">{this.state.settings.id}</div>
-                <div className="id">{JSON.stringify(this.state.timestamp)}</div>
+                <div className="id">{this.state.id}</div>
+                <div className="id">Server created: {this.state.timestamp}</div>
                 
                 <div className="fr-row">
                     <div className="fr-col s6">
