@@ -1,0 +1,13 @@
+.footer {
+    background: #f2f4ff;
+    height: 20%;
+}
+
+.valueEditor {
+    height: 720px;
+    overflow-y: auto;
+}
+
+.save-button {
+    float: right;
+}

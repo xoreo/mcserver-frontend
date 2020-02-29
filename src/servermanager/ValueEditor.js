@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ValueField from './ValueField';
+import './ServerManager.css'
 
 class ValueEditor extends Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class ValueEditor extends Component {
 
     render() {
         return (
-            <div>
+            <div className="valueEditor">
                 <div className="header">{this.props.header}</div>
                 {
                     this.getItems().map(

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ValueEditor from './ValueEditor'
 import net from '../net/net';
+import "./ServerManager.css"
 import "../server/Server.css"
 
 class ServerManager extends Component {
@@ -47,10 +48,8 @@ class ServerManager extends Component {
 
     render() {
         if (!this.state.properties) {}
-        // this.setState({id: this.props.match.params.id});
         return (
             <div className="fr-container main">
-                
                 <div className="header">{this.state.settings.name}</div>
                 <div className="id">{this.state.id}</div>
                 <div className="id">Server created: {this.state.timestamp}</div>
@@ -63,7 +62,14 @@ class ServerManager extends Component {
                     <div className="fr-col s6">
                         <ValueEditor properties={this.state.properties} header="Properties" />
                     </div>
+
+                    <button className="save-button">Save Changes</button>
                 </div>
+
+
+                {/* <div className="fr-footer footer">
+                    hi i am the footer
+                </div> */}
 
             </div>
         );
